@@ -1,0 +1,19 @@
+pipeline {
+  agent any
+  stages {
+    stage('检出') {
+      steps {
+        checkout([$class: 'GitSCM', branches: [[name: env.GIT_BUILD_REF]], 
+                                                          userRemoteConfigs: [[url: env.GIT_REPO_URL, credentialsId: env.CREDENTIALS_ID]]])
+        dir(path: 'java/syncPddOrderService/') {
+          sh 'mvn clean package --settings settings.xml'
+        }
+
+        dir(path: 'java/syncPddOrderService/target') {
+          sh 'curl  -T syncPddOrderService-1.0.RELEASE.jar -u '+PROJECT_TOKEN_GK+':'+PROJECT_TOKEN+' "https://xxxxxxxxxxxxx.coding.net/PddService/release/syncPddOrderService.jar?VERSION='+CI_BUILD_NUMBER+'"'
+        }
+
+      }
+    }
+  }
+}

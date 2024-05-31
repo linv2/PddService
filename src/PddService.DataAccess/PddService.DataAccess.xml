@@ -1,0 +1,497 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PddService.DataAccess</name>
+    </assembly>
+    <members>
+        <member name="T:PddService.DataAccess.Entity.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Address.UserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Address.Province">
+            <summary>
+            省份
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Address.City">
+            <summary>
+            城市
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Address.Town">
+            <summary>
+            区，乡镇
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Address.Detail">
+            <summary>
+            详细地址
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Address.Name">
+            <summary>
+            名字
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Address.Mobile">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Address.Default">
+            <summary>
+            是否默认地址
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Address.Delete">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:PddService.DataAccess.Entity.AsyncTask">
+            <summary>
+            异步任务
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.AsyncTask.TaskKey">
+            <summary>
+            任务Key
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.AsyncTask.TaskType">
+            <summary>
+            任务类型
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.AsyncTask.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.AsyncTask.TaskStatus">
+            <summary>
+            任务状态
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.AsyncTask.TaskParam">
+            <summary>
+            任务参数
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.AsyncTask.TaskParamHash">
+            <summary>
+            任务参数Hash值
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.AsyncTask.CompleteTime">
+            <summary>
+            任务完成
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.AsyncTask.CompleteParam">
+            <summary>
+            任务参数
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Express.Name">
+            <summary>
+            快递公司名称
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Express.PddCode">
+            <summary>
+            物流公司代码
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Express.PddLogisticsId">
+            <summary>
+            多多的公司ID
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Express.CaiNiaoCode">
+            <summary>
+            资源编码（发货使用）
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Express.CaiNiaoResCode">
+            <summary>
+            公司编码（取号使用）
+            </summary>
+        </member>
+        <member name="T:PddService.DataAccess.Entity.ExpressFollow">
+            <summary>
+            快递跟踪
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.ExpressFollow.ShippingId">
+            <summary>
+            快递公司ID
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.ExpressFollow.TrackingNumber">
+            <summary>
+            运单号
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.ExpressFollow.StatusTime">
+            <summary>
+            状态发生的时间
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.ExpressFollow.StatusDesc">
+            <summary>
+            状态描述
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.ExpressFollow.Action">
+            <summary>
+            节点说明 ，指明当前节点揽收、派送，签收
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.ExpressFollow.NodeDescription">
+            <summary>
+            节点说明 ，指明当前节点揽收、派送，签收
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.ExpressFollow.ScanTime">
+            <summary>
+            扫描时间
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.ExpressFollow.Desc">
+            <summary>
+            轨迹详细信息
+            </summary>
+        </member>
+        <member name="T:PddService.DataAccess.Entity.Mall">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Mall.OwnerId">
+            <summary>
+            多多店铺Id
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Mall.OwnerName">
+            <summary>
+            多多账号名
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Mall.MallName">
+            <summary>
+            店铺名称
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Mall.MerchantType">
+            <summary>
+            店铺类型,1:个人 2:企业 3:旗舰店 4:专卖店 5:专营店 6:普通店
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Mall.AccessToken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Mall.ExpireTime">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Mall.RefreshToken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Mall.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Mall.AddressId">
+            <summary>
+            发货地址
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Mall.PrintTemplateId">
+            <summary>
+            打印快递单配置
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Mall.PrintTemplate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Mall.AutoSendOut">
+            <summary>
+            自动发货
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Mall.AutoNotity">
+            <summary>
+            自动通知
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Mall.AutoCancel">
+            <summary>
+            未发货自动同意退款
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.OwnerId">
+            <summary>
+            多多店铺Id
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.OrderSn">
+            <summary>
+            订单编号
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.OrderNum">
+            <summary>
+            订单数量
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.CreatedTime">
+            <summary>
+            订单创建时间
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.ConfirmTime">
+            <summary>
+            成交时间
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.Country">
+            <summary>
+            国家或地区
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.Province">
+            <summary>
+            省份
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.City">
+            <summary>
+            城市
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.Town">
+            <summary>
+            区，乡镇
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.ReceiverName">
+            <summary>
+            收件人姓名
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.ReceiverPhone">
+            <summary>
+            收件人电话，仅订单状态=待发货状态下返回明文，其他状态下返回脱敏手机号，例如“1387677****”
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.Remark">
+            <summary>
+            订单备注
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.BuyerMemo">
+            <summary>
+            买家留言信息
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.TrackingNumber">
+            <summary>
+            快递单号
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.ShippingTime">
+            <summary>
+            发货时间
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.OrderStatus">
+            <summary>
+            订单发货状态，1：待发货，2：已发货待签收，3：已签收 0：异常
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.RefundStatus">
+            <summary>
+            订单售后状态，1：无售后或售后关闭，2：售后处理中，3：退款中，4：退款成功，0：异常
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.RefundTime">
+            <summary>
+            退款时间
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.AfterSalesStatus">
+            <summary>
+            后状态 0：无售后 2：买家申请退款，待商家处理 3：退货退款，待商家处理 4：商家同意退款，退款中 5：平台同意退款，退款中 6：驳回退款， 待买家处理 7：已同意退货退款,待用户发货 8：平台处理中 9：平台拒 绝退款，退款关闭 10：退款成功 11：买家撤销 12：买家逾期未处 理，退款失败 13：买家逾期，超过有效期 14 : 换货补寄待商家处理 15:换货补寄待用户处理 16:换货补寄成功 17:换货补寄失败 18:换货补寄待用户确认完成
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.PrintStatus">
+            <summary>
+            打印状态
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.Order.WaybillStatus">
+            <summary>
+            发货状态
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.OrderDetail.OrderSn">
+            <summary>
+            订单编号
+            </summary>
+        </member>
+        <member name="T:PddService.DataAccess.Entity.OrderRefund">
+            <summary>
+            退款
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.OrderRefund.OrderSn">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.OrderRefund.OrderMoney">
+            <summary>
+            订单金额
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.OrderRefund.OrderNum">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.OrderRefund.RefundId">
+            <summary>
+            售后单id
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.OrderRefund.BillType">
+            <summary>
+            售后类型: 1-仅退款；2-退货退款；3-换货；4-补寄；5-维修
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.OrderRefund.Operation">
+            <summary>
+            售后操作:1000-消费者申请；1001-平台客服新建；1002-平台客服开启；1003-系统创建
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.OrderRefund.RefundFee">
+            <summary>
+            退款金额
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.OrderRefund.Modified">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.OrderRefund.Status">
+            <summary>
+            处理状态
+            0未处理
+            1同意退货
+            2拒绝退货
+            99完成退款
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.OrderRefund.ExpressStatus">
+            <summary>
+            快递拦截状态
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.OrderRefund.HandleTime">
+            <summary>
+            处理时间
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.PrintTemplate.Size">
+            <summary>
+            尺寸
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.User.LastLoginTime">
+            <summary>
+            最后登录时间
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.User.LastLoginIP">
+            <summary>
+            最后登录 Ip
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.User.LoginCount">
+            <summary>
+            总登录次数
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.User.Disable">
+            <summary>
+            是否被禁用
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.User.Notity">
+            <summary>
+            是否通知
+            </summary>
+        </member>
+        <member name="P:PddService.DataAccess.Entity.User.NotityUrl">
+            <summary>
+            通知Url
+            </summary>
+        </member>
+        <member name="T:PddService.DataAccess.SelfOrderStatus">
+            <summary>
+            平台自身的状态标识
+            </summary>
+        </member>
+        <member name="F:PddService.DataAccess.SelfOrderStatus.Created">
+            <summary>
+            订单已经创建
+            </summary>
+        </member>
+        <member name="F:PddService.DataAccess.SelfOrderStatus.Waybill">
+            <summary>
+            订单已发货，但是未同步到多多平台
+            </summary>
+        </member>
+        <member name="F:PddService.DataAccess.SelfOrderStatus.WaybillNotityed">
+            <summary>
+            订单已经发货，并同步到多多平台
+            </summary>
+        </member>
+        <member name="F:PddService.DataAccess.SelfOrderStatus.Refund">
+            <summary>
+            订单有退款发生
+            </summary>
+        </member>
+        <member name="F:PddService.DataAccess.SelfOrderStatus.Complate">
+            <summary>
+            订单已完成
+            </summary>
+        </member>
+        <member name="T:PddService.DataAccess.PddDbContext">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

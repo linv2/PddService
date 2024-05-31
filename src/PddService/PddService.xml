@@ -1,0 +1,548 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PddService</name>
+    </assembly>
+    <members>
+        <member name="M:PddService.Code.AsyncLogicHandler.Handlers.AsyncWayBillHandler.BuildRequestParam(PddService.DataAccess.Entity.Mall,PddService.DataAccess.Entity.PrintTemplate,PddService.DataAccess.Entity.Address,PddService.DataAccess.Entity.Order[])">
+            <summary>
+            构建请求参数
+            </summary>
+            <param name="mallInfo"></param>
+            <param name="printTemplate"></param>
+            <param name="waybillAdds"></param>
+            <param name="orders"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Code.DynamicExpression.DynamicLinq.CreateLambdaParam``1(System.String)">
+            <summary>  
+            创建lambda中的参数,即c=>c.xxx==xx 中的c  
+            </summary>  
+        </member>
+        <member name="M:PddService.Code.DynamicExpression.DynamicLinq.CreateLambdaParam(System.String,System.Type)">
+            <summary>
+            创建lambda中的参数,即c=>c.xxx==xx 中的c  
+            </summary>  
+        </member>
+        <member name="M:PddService.Code.DynamicExpression.DynamicLinq.GenerateBody``1(System.Linq.Expressions.ParameterExpression,PddService.Code.DynamicExpression.Models.Rule)">
+            <summary>  
+            创建linq表达示的body部分,即c=>c.xxx==xx 中的c.xxx==xx  
+            </summary>  
+        </member>
+        <member name="M:PddService.Code.DynamicExpression.DynamicLinq.GenerateBody(System.Linq.Expressions.ParameterExpression,PddService.Code.DynamicExpression.Models.Rule,System.Type)">
+            <summary>
+            创建linq表达示的body部分,即c=>c.xxx==xx 中的c.xxx==xx  
+            </summary>  
+        </member>
+        <member name="M:PddService.Code.DynamicExpression.DynamicLinq.Sort``1(System.Linq.IQueryable{``0},PddService.Code.DynamicExpression.Models.Sort)">
+            <summary>  
+            创建linq表达示的body部分,即c=>c.xxx==xx 中的c.xxx==xx  
+            </summary>  
+        </member>
+        <member name="M:PddService.Code.DynamicExpression.DynamicLinq.GenerateLambda(System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.Expression)">
+            <summary>
+            创建完整的lambda,即c=>c.xxx==xx
+            </summary>
+        </member>
+        <member name="M:PddService.Code.DynamicExpression.DynamicLinq.GenerateLambda(System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.Expression,System.Type)">
+            <summary>
+            创建完整的lambda,即c=>c.xxx==xx
+            </summary>
+        </member>
+        <member name="M:PddService.Code.DynamicExpression.DynamicLinq.GenerateTypeLambda``1(System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.Expression)">
+            <summary>
+            创建完整的lambda，为了兼容EF中的where语句
+            </summary>
+        </member>
+        <member name="T:PddService.Code.PddSubscribeHandle.Handle.RefundAgreeAgreementHandle">
+            <summary>
+            同意退款协议消息
+            </summary>
+        </member>
+        <member name="T:PddService.Code.PddSubscribeHandle.Handle.RefundCreatedHandle">
+            <summary>
+            退款创建消息
+            </summary>
+        </member>
+        <member name="T:PddService.Code.PddSubscribeHandle.Handle.TraceISVNotifyHandle">
+            <summary>
+            物流轨迹
+            针对使用拼多多电子面单或在拼多多平台发货的运单，增量推送轨迹。向拼多多电子面单服务取号或在拼多多平台发货时自动触发，无需订阅。
+            </summary>
+        </member>
+        <member name="T:PddService.Code.PddSubscribeHandle.Handle.TradeLogisticsAddressChangedHandle">
+            <summary>
+            地址修改
+            </summary>
+        </member>
+        <member name="T:PddService.Code.PddSubscribeHandle.Handle.TradeSellerShipHandle">
+            <summary>
+            发货
+            </summary>
+        </member>
+        <member name="T:PddService.Code.PddSubscribeHandle.Handle.TradeSuccessHandle">
+            <summary>
+            交易成功
+            </summary>
+        </member>
+        <member name="T:PddService.Controllers.AddressController">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="M:PddService.Controllers.AddressController.#ctor(Microsoft.Extensions.Logging.ILogger{PddService.Controllers.AddressController},PddService.DataAccess.PddDbContext,PddService.Common.SiteConfig)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="dbContext"></param>
+            <param name="siteConfig"></param>
+        </member>
+        <member name="M:PddService.Controllers.AddressController.List(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获取地址列表
+            </summary>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页的数量</param>
+            <param name="name">发货人名字</param>
+            <param name="mobile">发货人电话</param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.AddressController.Get(System.Int32)">
+            <summary>
+            根据ID获取单个地址信息
+            </summary>
+            <param name="Id">Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.AddressController.Delete(System.Int32)">
+            <summary>
+            删除一个已存在的地址
+            </summary>
+            <param name="id">Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.AddressController.Add(PddService.DataAccess.Entity.Address)">
+            <summary>
+            添加一个新地址
+            </summary>
+            <param name="address"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.AddressController.Edit(PddService.DataAccess.Entity.Address)">
+            <summary>
+            编辑一个已经存在地址
+            </summary>
+            <param name="address"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.AddressController.SetDefault(System.Int32)">
+            <summary>
+            设置当前地址为默认地址
+            </summary>
+            <param name="id">Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:PddService.Controllers.CaiNiaoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PddService.Controllers.CaiNiaoController.#ctor(Microsoft.Extensions.Logging.ILogger{PddService.Controllers.CaiNiaoController},PddService.DataAccess.PddDbContext,PddService.Common.SiteConfig,CaiNiaoSDK.CaiNiaoClient,System.Net.Http.IHttpClientFactory)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="dbContext"></param>
+            <param name="siteConfig"></param>
+            <param name="caiNiaoClient"></param>
+            <param name="httpClientFactory"></param>
+        </member>
+        <member name="M:PddService.Controllers.CaiNiaoController.Authorize(System.String,System.String)">
+            <summary>
+            菜鸟OAuth授权
+            </summary>
+            <param name="url">回调地址</param>
+            <param name="ext">扩展参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.CaiNiaoController.Code(System.String,System.String,System.String)">
+            <summary>
+            菜鸟OAuth授权回调函数
+            </summary>
+            <param name="accessCode">access code</param>
+            <param name="ext">扩展参数</param>
+            <param name="appkey">app key</param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.CaiNiaoController.GetClouPrintTemplates(System.String)">
+            <summary>
+            获得菜鸟打印模板
+            </summary>
+            <param name="cpCode">快递编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.CaiNiaoController.QueryWaybill(System.String)">
+            <summary>
+            查询菜鸟快递账户信息
+            </summary>
+            <param name="cpCode">快递编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.CaiNiaoController.QueryOpCodeList(System.String)">
+            <summary>
+            查询菜鸟快递OpCode是否存在
+            </summary>
+            <param name="cpCode">快递编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.CaiNiaoController.DefaultQueryWaybill">
+            <summary>
+            查询默认快递菜鸟账户信息
+            </summary>
+            <returns>快递编码</returns>
+        </member>
+        <member name="M:PddService.Controllers.CaiNiaoController.CaiNiaoWaybillStatus">
+            <summary>
+            读取菜鸟账号绑定状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PddService.Controllers.ExpressController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PddService.Controllers.ExpressController.#ctor(Microsoft.Extensions.Logging.ILogger{PddService.Controllers.ExpressController},PddService.DataAccess.PddDbContext,PddService.Common.SiteConfig)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="dbContext"></param>
+            <param name="siteConfig"></param>
+        </member>
+        <member name="M:PddService.Controllers.ExpressController.List(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获取快递公司列表
+            </summary>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页的数量</param>
+            <param name="expressList"></param>
+            <param name="name">快递公司名字</param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.ExpressController.AddTemplate(PddService.DataAccess.Entity.PrintTemplate)">
+            <summary>
+            添加一个打印模板
+            </summary>
+            <param name="printTemplate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.ExpressController.TemplateList(System.Int32,System.Int32,System.String)">
+            <summary>
+            获取模板列表
+            </summary>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页的数量</param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.ExpressController.DeleteTemplate(System.Int32)">
+            <summary>
+            删除一个打印模板
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.ExpressController.SetDefault(System.Int32)">
+            <summary>
+            设置默认打印模板
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.ExpressController.Query(System.String)">
+            <summary>
+            查询物流轨迹
+            </summary>
+            <param name="waybillCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PddService.Controllers.MallController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PddService.Controllers.MallController.#ctor(Microsoft.Extensions.Logging.ILogger{PddService.Controllers.MallController},PddService.DataAccess.PddDbContext,PddService.Common.SiteConfig,PddService.Code.Manage.Order.OrderSyncManage,PddService.Code.ITokenContainer)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="dbContext"></param>
+            <param name="siteConfig"></param>
+            <param name="orderSyncManage"></param>
+            <param name="tokenContainer"></param>
+        </member>
+        <member name="M:PddService.Controllers.MallController.List(System.Int32,System.Int32,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            获取已绑定的店铺信息
+            </summary>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页的数量</param>
+            <param name="mallName">店铺名字</param>
+            <param name="ownerId">owner Id</param>
+            <param name="ownerName">owner Name</param>
+            <param name="valid">店铺是否还在有效期</param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.MallController.Get(System.Int32)">
+            <summary>
+            根据Id获取店铺
+            </summary>
+            <param name="Id">店铺Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.MallController.SyncOrder(System.Int32,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            同步拼多多的订单
+            </summary>
+            <param name="id">店铺Id</param>
+            <param name="startTime">开始时间</param>
+            <param name="endTime">结束时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.MallController.BatchSyncOrder(System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            批量同步拼多多订单
+            </summary>
+            <param name="mallIds">店铺Id列表“，”号分割</param>
+            <param name="startTime">开始时间</param>
+            <param name="endTime">结束时间</param>
+            <returns></returns>
+        </member>
+        <member name="T:PddService.Controllers.OAuthController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PddService.Controllers.OAuthController.#ctor(Microsoft.Extensions.Logging.ILogger{PddService.Controllers.OAuthController},PddService.DataAccess.PddDbContext,PddOpenSDK.PddClient,PddService.Common.SiteConfig,PddService.Code.Manage.MallManage)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="dbContext"></param>
+            <param name="pddClient"></param>
+            <param name="siteConfig"></param>
+            <param name="mallManager"></param>
+        </member>
+        <member name="M:PddService.Controllers.OAuthController.Authorize(System.String,System.String)">
+            <summary>
+            拼多多OAuth授权
+            </summary>
+            <param name="url"></param>
+            <param name="state"></param>
+            <returns>重定向</returns>
+        </member>
+        <member name="M:PddService.Controllers.OAuthController.Code(System.String,System.String)">
+            <summary>
+            拼多多OAuth授权回调
+            </summary>
+            <param name="code">code</param>
+            <param name="state">state</param>
+            <returns>重定向</returns>
+        </member>
+        <member name="M:PddService.Controllers.OAuthController.Refresh(System.String)">
+            <summary>
+            刷新Token
+            </summary>
+            <param name="mallId">店铺Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.OAuthController.GetLogisticsCompanies">
+            <summary>
+            获取多多快递公司
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PddService.Controllers.OrderController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PddService.Controllers.OrderController.#ctor(Microsoft.Extensions.Logging.ILogger{PddService.Controllers.OrderController},PddService.DataAccess.PddDbContext,PddService.Common.SiteConfig,PddService.Code.Manage.Order.OrderStatusSyncManage,PddService.Code.AsyncLogicHandler.AsyncLogicManager)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="dbContext"></param>
+            <param name="siteConfig"></param>
+            <param name="orderStatusSyncManage"></param>
+            <param name="asyncLogicManager"></param>
+        </member>
+        <member name="M:PddService.Controllers.OrderController.List(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Nullable{System.Boolean},System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            订单列表
+            </summary>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页的数量</param>
+            <param name="ownerName">店铺名字</param>
+            <param name="orderSn">订单号</param>
+            <param name="name">收货人名字</param>
+            <param name="mobile">收货人电话</param>
+            <param name="waybillStatus">发货状态</param>
+            <param name="printStatus">打印状态</param>
+            <param name="orderStatus">多多订单状态</param>
+            <param name="valid">订单有效性</param>
+            <param name="startTime">开始时间</param>
+            <param name="endTime">结束时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.OrderController.Get(System.Int32)">
+            <summary>
+            根据Id读取订单
+            </summary>
+            <param name="id">订单Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.OrderController.SyncOrderStatus(System.Int32[])">
+            <summary>
+            同步订单状态
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.OrderController.NotityPlatform(System.Int32[])">
+            <summary>
+            已发货未通知平台的订单，通知平台发货成功
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.OrderController.SingleWaybill(System.Int32)">
+            <summary>
+            单个订单发货
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.OrderController.BatchWaybill(System.Int32[])">
+            <summary>
+            订单批量发货
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.OrderController.UpdatePrintStatus(System.String[])">
+            <summary>
+            修改订单打印状态
+            </summary>
+            <param name="waybillCodes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PddService.Controllers.RefundController">
+            <summary>
+            退款
+            </summary>
+        </member>
+        <member name="M:PddService.Controllers.RefundController.List(System.Int32,System.Int32,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            查询退款订单
+            </summary>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页的数量</param>
+            <param name="orderSn">订单号</param>
+            <param name="name">收货人名字</param>
+            <param name="mobile">收货人电话</param>
+            <param name="startTime">开始时间</param>
+            <param name="endTime">结束时间</param>
+            <returns></returns>
+        </member>
+        <member name="T:PddService.Controllers.ReportController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PddService.Controllers.ReportController.GetMallCount">
+            <summary>
+            获取店铺总数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.ReportController.GetOrderCount(System.Nullable{System.DateTime},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            查询日期的订单总数(根据成交时间查询)
+            </summary>
+            <param name="queryTime"></param>
+            <param name="waybillStatus">发货状态[当值为-1则不进行查询，当值为0查询未发货，当值为1查询已发货]</param>
+            <param name="printStatus">打印状态[当值为-1则不进行查询，当值为0查询未打单，当值为1查询已打单]</param>
+            <param name="cacheTime">缓存时间，单位秒</param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.ReportController.GetMonthOrderCount(System.Int32)">
+            <summary>
+            查询日期区间的订单总数
+            </summary>
+            <param name="days">要查询的天数</param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.TaskController.List(System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            查询全部异步任务
+            </summary>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页的数量</param>
+            <param name="taskKey">任务Id</param>
+            <param name="taskStatus">任务状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.TaskController.Sync(System.String[])">
+            <summary>
+            查询任务的执行状态
+            </summary>
+            <param name="keys"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PddService.Controllers.UserController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PddService.Controllers.UserController.#ctor(Microsoft.Extensions.Logging.ILogger{PddService.Controllers.UserController},PddService.DataAccess.PddDbContext,PddService.Common.SiteConfig,PddOpenSDK.PddClient)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="dbContext"></param>
+            <param name="siteConfig"></param>
+            <param name="pddClient"></param>
+        </member>
+        <member name="M:PddService.Controllers.UserController.Login(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="jObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.UserController.UpdateDisplayName(PddService.DataAccess.Entity.User)">
+            <summary>
+            修改DisplayName
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.UserController.UpdatePassword(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            用户修改密码
+            </summary>
+            <param name="jObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PddService.Controllers.UserController.LogOut(System.String)">
+            <summary>
+            用户退出登录
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

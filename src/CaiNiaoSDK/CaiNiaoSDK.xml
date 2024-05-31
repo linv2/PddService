@@ -1,0 +1,330 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CaiNiaoSDK</name>
+    </assembly>
+    <members>
+        <member name="M:CaiNiaoSDK.CaiNiaoUrlHelper.GetOAuthUrl(CaiNiaoSDK.CaiNiaoClient,System.String,System.String)">
+            <summary>
+            获取网页授权地址
+            </summary>
+            <param name="pddClient"></param>
+            <param name="callbackUrl"></param>
+            <param name="ext"></param>
+            <returns></returns>
+        </member>
+        <member name="F:CaiNiaoSDK.Http.HttpRequest.PddSrvUrl">
+            <summary>
+            请求接口
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.CaiNiaoResponseModel.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.CaiNiaoResponseModel.ErrorCode">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.CaiNiaoResponseModel.ErrorMsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:CaiNiaoSDK.Models.DTO.AddressDTO">
+            <summary>
+            发货地址
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.AddressDTO.Province">
+            <summary>
+            省
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.AddressDTO.City">
+            <summary>
+            城市
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.AddressDTO.Town">
+            <summary>
+            街道
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.AddressDTO.District">
+            <summary>
+            区县
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.AddressDTO.Detail">
+            <summary>
+            详细地址
+            </summary>
+        </member>
+        <member name="T:CaiNiaoSDK.Models.DTO.OrderInfoDTO">
+            <summary>
+            订单信息
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.OrderInfoDTO.OrderChannelsType">
+            <summary>
+            <![CDATA[订单渠道平台，请按实际订单所属平台传入（详见https://support-cnkuaidi.taobao.com/doc.htm#?docId=105085&docType=1）]]>
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.OrderInfoDTO.TradeOrderList">
+            <summary>
+            订单号列表（上限100个）
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.PackageInfoDTO.Id">
+            <summary>
+            包裹id，用于拆合单场景（只能传入数字、字母和下划线；批量请求时值不得重复，大小写敏感，即123A,123a 不可当做不同ID，否则存在一定可能取号失败）
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.PackageInfoDTO.Items">
+            <summary>
+            商品信息,数量限制为100
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.PackageInfoDTO.Volume">
+            <summary>
+            体积, 单位 ml
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.PackageInfoDTO.Weight">
+            <summary>
+            重量,单位 g
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.TradeOrderInfoDTO.LogisticsServices">
+            <summary>
+            <![CDATA[物流服务值（详见https://support-cnkuaidi.taobao.com/doc.htm#?docId=106156&docType=1，如无特殊服务请置空）]]>
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.TradeOrderInfoDTO.ObjectId">
+            <summary>
+            请求ID（请保证一次批量请求中值不重复，调用方可按该值从返回数据中获取相应结果；只限传入数字、字母和下划线，建议用数字序号下标代替）
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.TradeOrderInfoDTO.OrderInfo">
+            <summary>
+            订单信息
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.TradeOrderInfoDTO.PackageInfo">
+            <summary>
+            包裹信息
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.TradeOrderInfoDTO.Recipient">
+            <summary>
+            收件人信息
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.TradeOrderInfoDTO.TemplateUrl">
+            <summary>
+            云打印标准模板URL（组装云打印结果使用，值格式http://cloudprint.cainiao.com/template/standard/${模板ID}）
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.TradeOrderInfoDTO.UserId">
+             <summary>
+            使用者ID（使用电子面单账号的实际商家ID，如存在一个电子面单账号多个店铺使用时，请传入店铺的商家ID
+             </summary>
+        </member>
+        <member name="T:CaiNiaoSDK.Models.DTO.UserInfoDTO">
+            <summary>
+            发货人信息
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.UserInfoDTO.Address">
+            <summary>
+            发货地址
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.UserInfoDTO.Mobile">
+            <summary>
+            手机号码（手机号和固定电话不能同时为空）
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.UserInfoDTO.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.UserInfoDTO.Phone">
+            <summary>
+            固定电话（手机号和固定电话不能同时为空）
+            </summary>
+        </member>
+        <member name="T:CaiNiaoSDK.Models.DTO.WaybillApplySubscriptionInfoDTO">
+            <summary>
+            CP网点信息及对应的商家的发货信息
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.WaybillApplySubscriptionInfoDTO.BranchAccountCols">
+            <summary>
+            CP网点信息及对应的商家的发货信息
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.WaybillApplySubscriptionInfoDTO.cpCode">
+            <summary>
+            物流服务商ID 
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.WaybillApplySubscriptionInfoDTO.cpType">
+            <summary>
+            1是直营，2是加盟
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.WaybillBranchAccountDTO.AllocatedQuantity">
+            <summary>
+            已用面单数量
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.WaybillBranchAccountDTO.BranchCode">
+            <summary>
+            网点Code
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.WaybillBranchAccountDTO.BranchName">
+            <summary>
+            网点名称
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.WaybillBranchAccountDTO.BranchStatus">
+            <summary>
+            网点状态    
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.WaybillBranchAccountDTO.CancelQuantity">
+            <summary>
+             取消的面单总数
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.WaybillBranchAccountDTO.PrintQuantity">
+            <summary>
+            已经打印的面单总数
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.WaybillBranchAccountDTO.Quantity">
+            <summary>
+            电子面单余额数量    
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.WaybillBranchAccountDTO.shippAddressCols">
+            <summary>
+            当前网点下的发货地址
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.WaybillBranchAccountDTO.serviceInfoCols">
+            <summary>
+            可用的服务信息列表
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.ServiceInfoDTO.ServiceName">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.ServiceInfoDTO.ServiceCode">
+            <summary>
+            服务编码
+            </summary>
+        </member>
+        <member name="T:CaiNiaoSDK.Models.DTO.WaybillCloudPrintDTO">
+            <summary>
+            电子面单打印信息
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.WaybillCloudPrintDTO.ObjectId">
+            <summary>
+            请求id（与参数传入时相同）
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.WaybillCloudPrintDTO.WaybillCode">
+            <summary>
+            面单号
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.DTO.WaybillCloudPrintDTO.PrintData">
+            <summary>
+            云打印内容
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.Request.CloudPrintStandDardTemplatesRequest.CpCode">
+            <summary>
+            指定cpCode的标准模板
+            </summary>
+        </member>
+        <member name="T:CaiNiaoSDK.Models.Request.TMSWaybillGetRequest">
+            <summary>
+            电子面单云打印取号接口
+            <para>接口文档https://global.link.cainiao.com/#/homepage/api/link/merchant_electronic_sheet/TMS_WAYBILL_GET?_k=7a0klb</para>
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.Request.TMSWaybillGetRequest.Sender">
+            <summary>
+            发货人信息
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.Request.TMSWaybillGetRequest.TradeOrderInfoDtos">
+            <summary>
+            	        请求面单列表（上限10个）
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.Request.TMSWaybillGetRequest.StoreCode">
+            <summary>
+            特殊业务使用，如需使用请联系对接人员。
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.Request.TMSWaybillGetRequest.ResourceCode">
+            <summary>
+            特殊业务使用，如需使用请联系对接人员。
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.Request.TMSWaybillGetRequest.DmsSorting">
+            <summary>
+            特殊业务使用，如需使用请联系对接人员。
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.Request.TMSWaybillGetRequest.NeedEncrypt">
+            <summary>
+            云打印数据是否加密（true-加密;false-不加密）
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.Request.TMSWaybillSubscriptionQueryRequest.CpCode">
+            <summary>
+            指定cpCode的标准模板
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.Response.GetMyStdTemplatesResponse.ErrorCode">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.Response.GetMyStdTemplatesResponse.ErrorMsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:CaiNiaoSDK.Models.Response.TMSWaybillGetResponse">
+            <summary>
+            电子面单云打印取号接口
+            </summary>
+        </member>
+        <member name="P:CaiNiaoSDK.Models.Response.TMSWaybillGetResponse.WaybillCloudPrintResponseList">
+            <summary>
+            电子面单打印信息列表
+            </summary>
+        </member>
+        <member name="M:PddOpenSDK.DefaultCaiNiaoClient.GetMd5Hash(System.String)">
+            <summary>
+            MD5加密
+            </summary>
+            <param name="input">需要加密的参数</param>
+            <returns>返回16位小写字符串</returns>
+        </member>
+    </members>
+</doc>

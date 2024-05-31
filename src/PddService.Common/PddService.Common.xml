@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PddService.Common</name>
+    </assembly>
+    <members>
+        <member name="P:PddService.Common.JsonConverter.DateTimeConverter.DateTimeFormat">
+            <summary>
+            获取或设置DateTime格式
+            <para>默认为: yyyy-MM-dd HH:mm:ss</para>
+            </summary>
+        </member>
+        <member name="P:PddService.Common.JsonConverter.DateTimeNullConverter.DateTimeFormat">
+            <summary>
+            获取或设置DateTime格式
+            <para>默认为: yyyy-MM-dd HH:mm:ss</para>
+            </summary>
+        </member>
+        <member name="P:PddService.Common.Result.Result.Code">
+            <summary>
+            <![CDATA[错误码]]>
+            </summary>
+        </member>
+        <member name="P:PddService.Common.Result.Result.Message">
+             <summary>
+            <![CDATA[消息]]>
+             </summary>
+        </member>
+        <member name="P:PddService.Common.Result.ResultArray`1.Total">
+            <summary>
+            总数
+            </summary>
+        </member>
+        <member name="P:PddService.Common.Result.Result`1.Data">
+            <summary>
+            <![CDATA[数据]]>
+            </summary>
+        </member>
+        <member name="T:PddService.Common.Snowflake">
+            <summary>
+            
+            From: https://github.com/twitter/snowflake
+            An object that generates IDs.
+            This is broken into a separate class in case
+            we ever want to support multiple worker threads
+            per process
+            </summary>
+        </member>
+        <member name="M:PddService.Common.Util.Sha1(System.String)">
+            <summary>
+            SHA1 加密
+            </summary>
+        </member>
+        <member name="M:PddService.Common.Util.Sha256(System.String)">
+            <summary>
+            SHA256 加密
+            </summary>
+        </member>
+        <member name="M:PddService.Common.Util.HashAlgorithmBase(System.Security.Cryptography.HashAlgorithm,System.String,System.Text.Encoding)">
+            <summary>
+            HashAlgorithm 加密统一方法
+            </summary>
+        </member>
+        <member name="M:PddService.Common.Util.Bytes2Str(System.Collections.Generic.IEnumerable{System.Byte},System.String)">
+            <summary>
+            转换成字符串
+            </summary>
+        </member>
+    </members>
+</doc>
